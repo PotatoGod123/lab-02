@@ -1,5 +1,6 @@
-'use strick'
+'use strict'
 let allAnimalsinfo = [];
+
 
 function AnimalMaster(data){
   this.pathUrl = data.image_url;
@@ -28,13 +29,12 @@ $.ajax('../data/page-1.json')
       $clonePhotoTemp.find('img').attr({'src': value.pathUrl, 'alt' : value.title });
       $clonePhotoTemp.find('p').text(value.description);
       $('main').append($clonePhotoTemp);
-
+      // let $selectMenu = $('select').find('option').clone();
+      // $selectMenu.text('test');
 
     });
 
 
   });
 
-
-  
 
