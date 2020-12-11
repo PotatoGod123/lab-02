@@ -1,7 +1,9 @@
 'use strict'
+//global variables
 let allAnimalsinfo = [];
 
-
+//the main constructor, meant to take an array of objects and put it inside
+// the variable above, specifically for the .json data
 function AnimalMaster(data){
   this.pathUrl = data.image_url;
   this.title = data.title;
@@ -13,14 +15,16 @@ function AnimalMaster(data){
 
 } 
 
-
+//this will get ajax data after page loads
 $.ajax('../data/page-1.json')
   .then(data => {
+    //here we use the data and shove it into the object constructor
     data.forEach(value => {
       let animal = new AnimalMaster(value);
 
     });
-
+    //this will take our newly formed object and render the stuff onto the page
+    //DOM manipulation
     allAnimalsinfo.forEach(value => {
       let $clonePhotoTemp = $('#photo-template').clone();
       $clonePhotoTemp.removeAttr('id');
