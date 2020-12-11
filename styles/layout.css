@@ -1,0 +1,44 @@
+
+
+header{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto 5vw auto;
+  
+}
+
+#photo-template{
+  display: none;
+}
+
+.hide{
+  display: none;
+}
+
+
+
+
+div{
+  width: 200px;
+  height: 100%;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  display: inline-block;
+  padding: 1vw;
+  border-radius: 1vw;
+  
+  
+}
+
+img{
+  width: 100%;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: auto;
+}

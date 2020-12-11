@@ -44,6 +44,7 @@ $.ajax('../data/page-1.json')
 
 
 
+
 function dropDownList(value){
   let $cloneOption = $("option[value|='default']").clone();
   $($cloneOption).attr('value',value.keyword);
@@ -72,3 +73,6 @@ $selectMenu.on('change',function(){
     $('div').removeClass('hide');
   }
 })
+
+
+
