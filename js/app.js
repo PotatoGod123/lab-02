@@ -1,6 +1,8 @@
 'use strict'
 //global variables
 let allAnimalsinfo = [];
+let $selectMenu = $('select');
+
 
 //the main constructor, meant to take an array of objects and put it inside
 // the variable above, specifically for the .json data
@@ -33,14 +35,44 @@ $.ajax('../data/page-1.json')
       $clonePhotoTemp.find('img').attr({'src': value.pathUrl, 'alt' : value.title });
       $clonePhotoTemp.find('p').text(value.description);
       $('main').append($clonePhotoTemp);
-      // let $selectMenu = $('select').find('option').clone();
+      // 
       // $selectMenu.text('test');
-
+      dropDownList(value);
     });
-
 
   });
 
+
+
+
+function dropDownList(value){
+  let $cloneOption = $("option[value|='default']").clone();
+  $($cloneOption).attr('value',value.keyword);
+  $($cloneOption).text(value.keyword);
+  if($($cloneOption).text() !== $(`option[value|=${value.keyword}]`).text()){
+    
+    $($selectMenu).append($cloneOption);
+
+  }
+  
+
+}
+
+
+
+$selectMenu.on('change',function(){
+  let targetValue = this.value;
+  
+  $('div').each(function(){
+    $(this).addClass('hide');
+  });
+  $(`.${targetValue}`).each(function(){
+    $(this).attr('class',targetValue);
+  });
+  if(targetValue==='default'){
+    $('div').removeClass('hide');
+  }
+})
 
 
 
