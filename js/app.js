@@ -1,24 +1,29 @@
 'use strict'
 //global variables
 let allAnimalsinfo = [];
+let allAnimalsInfoSetTwo=[];
 let $selectMenu = $('select');
 
 
 //the main constructor, meant to take an array of objects and put it inside
 // the variable above, specifically for the .json data
-function AnimalMaster(data){
+function AnimalMaster(data,set=1){
   this.pathUrl = data.image_url;
   this.title = data.title;
   this.description = data.description;
   this.keyword = data.keyword;
   this.horns = data.horns;
 
-  allAnimalsinfo.push(this);
+  if(set===1) {
+    allAnimalsinfo.push(this);
+  }else if(set ===2){
+    allAnimalsInfoSetTwo=[];
+  }
 
 } 
 
-//this will get ajax data after page loads
-$.ajax('../data/page-1.json')
+//this will get ajax data after page loads, first page
+$.ajax('./data/page-1.json')
   .then(data => {
     //here we use the data and shove it into the object constructor
     data.forEach(value => {
@@ -41,6 +46,9 @@ $.ajax('../data/page-1.json')
     });
 
   });
+
+//second page data
+// $.ajax('../data/')
 
 
 
