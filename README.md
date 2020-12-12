@@ -44,4 +44,60 @@ Finish time: _____
 
 Actual time needed to complete: _____
 
-How To Implement Feature: Add custom google font, have all images float left and have a set size for all the images. Background color with alternating border colors between the images.  
+How To Implement Feature: Add custom google font, have all images float left and have a set size for all the images. Background color with alternating border colors between the images.
+
+# LAB-03
+
+# Time Estiamtes 
+
+Number and name of feature: Feature 1 Pagination
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+How to Implement Feature: Create event listners based on the button being clicked, populating between the two pages and their appropriate AJAX files. Create two button that allows us to transfer between the two pages when clicked.
+
+
+Number and name of feature: Feature 2 Templating
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+How to Implement Feature: Incorporate the mustache template within the original HTML file including the already created elements used in our jQuery templates. As mentioned in the instructions, refactor the method that renders our images to use the created Mustache template, rather than using .copy with jQuery.
+
+
+Number and name of feature: Feature 3 Styling & Flexbox
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+How to Implement Feature: Refractor our previously created floats to use Flexbox to style our images and the layout of our two pages. Possibly incorporate a mix of flexbox and floats, if needed.
+
+
+Number and name of feature: Feature 4 Sort the Images
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+How to Implement Feature: 
+
