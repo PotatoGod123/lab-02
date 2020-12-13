@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet"> 
+    <script id="photo-template" type="x-tmp1-mustache">
+      <div id="{{ title }}" class="{{ keyword }} {{ filter }}" >
+        <h2>{{ title }}</h2>
+        <img src="{{ urlLink }}" alt="{{ title }}">
+        <p>{{ description }} </p>
+      </div>
+    </script>
+    <script id="option-template" type="x-tmp1-mustache">
+      <option value="{{ keyword }}">{{ keyword }}</option>
+    </script>
   </head>
   <body>
     <header>
@@ -13,19 +23,27 @@
       <select>
         <option value="default">Filter by Keyword</option>
       </select>
+      <div id="radioSelection">
+        <p>View by title or amount of horns</p>
+        <input type="radio" id="default" name="selection" value="deafult">
+        <label for="default">Title</label><br>
+        <input type="radio" id="horns" name="selection" value="horns">
+        <label for="horns">Horns</label><br>
+      </div>
+      <div id="buttons">
+        <button id="pageone" value="pageone" type="button">Page1</button>
+        <button id="pagetwo" value="pagetwo" type="button">Page2</button>
+      </div>
     </header>
     <main>
-      <div id="photo-template">
-        <h2></h2>
-        <img src="" alt="">
-        <p></p>
-      </div>
+
     </main>
     
     <footer>
       &copy; 2018 Code Fellows
     </footer>
   </body>
+  <script src="https://unpkg.com/mustache@latest"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./js/app.js"></script>
 </html>
