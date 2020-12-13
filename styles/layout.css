@@ -8,6 +8,19 @@ header{
   
 }
 
+main{
+  margin: auto;
+  max-height: auto;
+  max-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+
+}
+
+
 #photo-template{
   display: none;
 }
@@ -20,13 +33,13 @@ header{
 
 
 div{
-  width: 200px;
+  width: 250px;
   height: 100%;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin: 0 2% 30px 2%;
   display: inline-block;
   padding: 1vw;
   border-radius: 1vw;
+  
   
   
 }
@@ -41,4 +54,29 @@ footer{
   align-items: center;
   width: 300px;
   margin: auto;
+}
+
+.horn1, .sort{
+  order: -1
+
+
+}
+
+.horn2, .sort{
+  order: 1
+  
+
+}
+
+.horn3, .sort{
+  
+  order: 2
+
+}
+
+.horn100, .sort{
+
+  order: 3
+  
+
 }
