@@ -82,7 +82,7 @@ function dropDownList(value){
   
 
 }
-
+//a callback funtion to used after we get the data from json
 function renderDivWithInfo(value){
   let template = $('#photo-template').html();
   let html = Mustache.render(template,{
@@ -163,27 +163,29 @@ function sortObjects(){
   allAnimalsinfo.sort(function(a, b) {
     var nameA = a.title.toUpperCase(); // ignore upper and lowercase
     var nameB = b.title.toUpperCase(); // ignore upper and lowercase
-    if (nameA < nameB) {
-      return -1;
-    }
     if (nameA > nameB) {
       return 1;
     }
+    else if (nameA < nameB) {
+      return -1;
+    }else{
+      return 0;
+    }
 
     // names must be equal
-    return 0;
+    
   });
   allAnimalsInfoSetTwo.sort(function(a, b) {
     var nameA = a.title.toUpperCase(); // ignore upper and lowercase
     var nameB = b.title.toUpperCase(); // ignore upper and lowercase
-    if (nameA < nameB) {
-      return -1;
-    }
     if (nameA > nameB) {
       return 1;
+    }else if (nameA < nameB) {
+      return -1;
+    } else{
+      return 0;
     }
 
     // names must be equal
-    return 0;
   });
 }
